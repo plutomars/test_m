@@ -84,6 +84,7 @@ app.patch('/api/add/books/:id',(req,res)=>{
 })
 
 
+
 //DELETE
 app.delete('/api/delete/books/:id',(req,res)=>{
     Book.findByIdAndRemove(req.params.id,(err,doc)=>{
