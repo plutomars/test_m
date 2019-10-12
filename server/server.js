@@ -12,7 +12,11 @@ app.use(bodyParser.json())
 //DB
 const mongoose = require('mongoose')
 mongoose.Promise=global.Promise
-mongoose.connect('mongodb://localhost:27017/book_db')
+
+
+// mongoose.connect('mongodb://localhost:27017/book_db')
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost:27017/book_db')
+
 const {Book} = require('./models/books')
 const {Store} = require('./models/stores')
 
