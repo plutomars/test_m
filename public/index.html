@@ -40,7 +40,7 @@
 <script>
     $.ajax({
         type:"GET",
-        url:"http://localhost:3000/api/books?limit=4&sort=asc",
+        url:"/api/books?limit=4&sort=asc",
         success:(data,status,xhr)=>{
             let template = ``
             data.map((item)=>{
